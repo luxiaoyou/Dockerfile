@@ -1,0 +1,5 @@
+version: "3.7"
+services:
+  gitbook:
+    build: .
+    image: gitbook:8-alpine
