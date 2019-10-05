@@ -16,5 +16,5 @@ docker run --rm -v $PWD:/var/gitbook_home -v $PWD/book_html:/var/gitbook_src git
 或者
 
 端口映射访问(调试用)
-docker run -d -p 4000:4000 -v $PWD:/var/gitbook_home gitbook:8-alpine gitbook build serve
+docker run -d -p 4000:4000 -v $PWD:/var/gitbook_home gitbook:8-alpine gitbook serve
 ```
