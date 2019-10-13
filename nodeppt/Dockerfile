@@ -2,7 +2,7 @@ FROM node:8-alpine
 
 LABEL Bruce Lu "luxiaoyou.com@gmail.com"
 
-ENV WORKPLACE_DIR=/var/gitbook_home
+ENV WORKPLACE_DIR=/var/nodeppt_home
 
 VOLUME $WORKPLACE_DIR
 
