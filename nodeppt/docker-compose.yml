@@ -1,0 +1,5 @@
+version: "3"
+services:
+  nodeppt:
+    build: .
+    image: nodeppt:8-alpine
