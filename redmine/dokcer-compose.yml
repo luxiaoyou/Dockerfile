@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+  redmine:
+    image: redmine
+    restart: always
+    volumes:
+      - $PWD/plugins:/usr/src/redmine/plugins
+      - /etc/localtime:/etc/localtime
+    ports:
+      - 8080:3000
+    environment:
+      REDMINE_DB_MYSQL: db
+      REDMINE_DB_PASSWORD: password_root
+
+  db:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - $PWD/data:/var/lib/mysql/
+      - /etc/localtime:/etc/localtime
+    environment:
+      MYSQL_ROOT_PASSWORD: password_root
+      MYSQL_DATABASE: redmine
